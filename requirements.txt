@@ -1,4 +1,4 @@
-polars
+polars-lts-cpu
 pandas
 altair
 altair_viewer
