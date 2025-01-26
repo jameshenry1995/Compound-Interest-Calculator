@@ -8,7 +8,9 @@
 !*.txt
 !*.yaml
 !*.py
-!*.
+
+# Allow any file starting with "Dockerfile"
+!Dockerfile*
 
 # Optionally, you can also allow directories you want to track
 !/
