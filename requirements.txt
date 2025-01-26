@@ -1,0 +1,6 @@
+polars
+pandas
+altair
+altair_viewer
+pyarrow
+streamlit

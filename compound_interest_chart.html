@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.20.1"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-5f36df20d45a8386ab86463fde62523b"}, "mark": {"type": "line", "point": true}, "encoding": {"tooltip": [{"field": "Year", "type": "quantitative"}, {"field": "Future Value", "type": "quantitative"}], "x": {"field": "Year", "title": "Year", "type": "quantitative"}, "y": {"field": "Future Value", "scale": {"zero": false}, "title": "Future Value ($)", "type": "quantitative"}}, "height": 400, "title": "Growth of Investment Over Time", "width": 600, "$schema": "https://vega.github.io/schema/vega-lite/v5.20.1.json", "datasets": {"data-5f36df20d45a8386ab86463fde62523b": [{"Year": 1, "Future Value": 12330.017389497647}, {"Year": 2, "Future Value": 25290.86186955677}, {"Year": 3, "Future Value": 38914.80775136573}, {"Year": 4, "Future Value": 53235.78056112601}, {"Year": 5, "Future Value": 68289.44151934635}, {"Year": 6, "Future Value": 84113.27634225738}, {"Year": 7, "Future Value": 100746.6885864756}, {"Year": 8, "Future Value": 118231.09776935726}, {"Year": 9, "Future Value": 136610.04250937593}, {"Year": 10, "Future Value": 155929.28894335747}, {"Year": 11, "Future Value": 176236.94469054646}, {"Year": 12, "Future Value": 197583.5786472905}, {"Year": 13, "Future Value": 220022.34691064816}, {"Year": 14, "Future Value": 243609.1251444876}, {"Year": 15, "Future Value": 268402.64771768585}, {"Year": 16, "Future Value": 294464.65396090253}, {"Year": 17, "Future Value": 321860.0419061277}, {"Year": 18, "Future Value": 350657.02989183704}, {"Year": 19, "Future Value": 380927.32643617265}, {"Year": 20, "Future Value": 412746.30880115926}, {"Year": 21, "Future Value": 446193.21069260413}, {"Year": 22, "Future Value": 481351.31956307933}, {"Year": 23, "Future Value": 518308.18400930066}, {"Year": 24, "Future Value": 557155.8317803487}, {"Year": 25, "Future Value": 597990.9989396045}, {"Year": 26, "Future Value": 640915.3707510459}, {"Year": 27, "Future Value": 686035.8348897415}, {"Year": 28, "Future Value": 733464.7476070774}, {"Year": 29, "Future Value": 783320.2135134994}, {"Year": 30, "Future Value": 835726.3796754722}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>
