@@ -8,6 +8,7 @@
 !*.txt
 !*.yaml
 !*.py
+!*.toml
 
 # Allow any file starting with "Dockerfile"
 !Dockerfile*
