@@ -8,6 +8,7 @@
 !*.txt
 !*.yaml
 !*.py
+!*.
 
 # Optionally, you can also allow directories you want to track
 !/
