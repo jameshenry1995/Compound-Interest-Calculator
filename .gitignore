@@ -1,0 +1,17 @@
+# Ignore all files by default
+*
+
+# Don't ignore .gitignore itself
+!.gitignore
+
+# Allow .txt, .yaml, and .py files
+!*.txt
+!*.yaml
+!*.py
+
+# Optionally, you can also allow directories you want to track
+!/
+
+# If you want to explicitly allow certain directories (e.g., "src" or "config")
+!src/
+!config/
